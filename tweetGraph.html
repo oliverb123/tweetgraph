@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>TweetGraph</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="archive_highlight_div" style="position:absolute;max-width:200px; height:auto; background-color: lightgray; z-index:1000;top:10px;left:10px;padding:5px;text-align:center;">
+            To see anything you'll have to upload one or more twitter.js files:<br>
+            <input type="file" id="file_upload" multiple>
+        </div>
+        <div id="search_div" style="position:absolute; height:auto; background-color: lightgray; z-index:1000;bottom:10px;left:10px;padding:5px;text-align:center;">
+            <input type="text" placeholder="Search Tweet Content" id="tweet_search_input" size="30">
+        </div>
+        <div id="twitter_integration_status" style="position:absolute; max-width:250px; height:auto; background-color: lightgray;z-index:1000;top:10px;right:10px;padding:5px;text-align:center;display:none;">
+            Twitter Integration Disabled
+            <button id="twitter_auth">Enable</button>
+        </div>
+        <div id="help_div" style="position:absolute; max-width:300px; height:auto; background-color: lightgray; z-index: 1000; bottom: 10px; right: 10px; padding: 5px;" id="tweet_info">
+            <button id="toggle_help">Hide</button>
+            <div id="help_contents_div">
+                <h2>Please give the simulation some time to settle</h2>
+                <h2>Controls</h2>
+                <ul>
+                    <li>Scroll to zoom in and out</li>
+                    <li>Click and drag in empty space to pan around</li>
+                    <li>[P] - Pause/resume simulation, <b>highly recommended for large graphs</b></li>
+                    <li>[Q] - Toggle quote mode</li>
+                    <li>Hover over a node to see it's information</li>
+                    <li>Click and hold a node to drag it around</li>
+                    <li>Double click a node to highlight that reply-chain. Double click any node in a highlighted reply-chain to return to normal view</li>
+                </ul>
+                <a href="tweetGraphAbout.html" target="blank">About TweetGraph</a>
+            </div>
+        </div>
+        <script src="vivagraph.min.js"></script>
+        <script src="tweetGraphEngine.js"></script>
+        <script src="WASMLayoutInterface.js"></script>
+        <script src="tweetGraphSrc.js"></script>
+        <div id="network"></div>
+        <style type="text/css" media="screen">
+            html, body, svg { width: 99%; height: auto;}
+        </style>
+        <div style="position:absolute; width:200px; height:auto; background-color: lightgray; z-index: 1000;" id="tweet_info"></div>
+        <div style="position:absolute; width:200px; height:auto; background-color: lightgray; z-index: 1000; right:0; left:0;margin-left: auto; margin-right: auto; top:30%; display: none;" id="twitter_login_box">
+            <h2>Enable Twitter Integration</h2>
+            Please follow <a id="twitter_auth_link" target="blank">this link</a> grant TweetGraph permission to read your tweets, and enter the pin you'll find there below:<br/>
+            <input type="text" id="twitter_passcode_field" placeholder="Enter Pin">
+            <button id="twitter_passcode_button">Enable</button><br?>
+        </div>
+        <div id="rule_set_div" style="position:absolute;width:auto; height:auto; background-color: lightgray; z-index: 1000; left:10px; bottom:50px; display: none;">
+            <b>Current rendering rules:</b>
+            <ul id="rule_set_list">
+            </ul>
+        </div>
+    </body>
+</html>

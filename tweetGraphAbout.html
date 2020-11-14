@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>About TweetGraph</title>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2>Description</h2>
+        Upload the "tweet.js" file found in your twitter archive (data/tweet.js), and see it visually represented<br>
+        The file you upload stays on your computer, I don't send it to a server I own or save it in any way, and I don't want to. Your tweets are between you, your followers, and God. Quote links show up in red, reply links show up in blue<br>
+        <h2>Limitations</h2>
+        I only show you tweets with at least 1 connection, otherwise the graph would be too messy to be worth looking at. I am limited by how twitter manages archives to only knowing about tweets you've sent. This means that conversations, with you sending a tweet, then another person sending a tweet, back and forth, show up to me as a bunch of unconnected tweets, and therefore don't get drawn here, sorry. I'm experimenting with ways to pull tweets you've replied to from twitter in some way, but twitters API is tricky and has harsh limitations.<br/>
+        <a href="https://twitter.com/ollybot_browne">Stay tuned</a> for updates. Future plans include:
+        <ul>
+            <li>Integration with the twitter api to display back-and-forth conversations and include tweets made after your archive was generated</li>
+            <li>The ability to dump your graph in a format compatible with Gephi</li>
+            <li>I've received a few requests for a "graph zoo" of common graph and sub-graph structures I've seen, with some commentary on how the structure form maps to content or style</li>
+            <li>I've also received requests to allow people to upload their archives and let others explore them. This is a very interesting idea, but the logistics of managing other peoples are complex enough that I am unwilling to do it without significant incentive</li>
+        </ul>
+        Please keep in mind I'm one person doing this for fun. None of the above are promises.<br>
+        TweetGraph is only supported for Google Chrome and Chromium based browsers. Sorry, I need some features every other browser doesn't have.
+    </body>
+</html>
