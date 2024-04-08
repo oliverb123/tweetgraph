@@ -405,7 +405,7 @@ function launchNetworkRendering(){
     }).click(function (node) {
     });
     document.addEventListener("keydown", event => {
-        if(event.path[0] != document.body) return;
+        if(event.composedPath()[0] != document.body) return;
         if(event.key == "p"){
             if(!renderer.isPaused){
                 pauseSim();
